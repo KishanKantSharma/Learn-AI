@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT Clone</title>
+    <script src="https://unpkg.com/htmx.org@1.9.12" integrity="sha384-ujb1lZYygJmzgSwoxRggbCHcjc0rB2XoQrxeTUQyRjrOnlCoYta87iKBWq3EsdM2" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="h-screen bg-gray-100">
+    <div class="flex h-full">
+        <!-- Sidebar -->
+        <section class="w-64 bg-gray-200 p-4 h-full">
+            <div id="recent-message-list" class="font-bold text-lg">Recent Chats</div>
+            <!-- Populate recent messages here -->
+        </section>
+
+        <!-- Main Chat Body -->
+        <main class="flex-1 bg-white p-4 h-full flex flex-col">
+            <h2 class="text-xl font-bold mb-4">Chat Interface</h2>
+            <div id="response-container" class="flex-1 mb-4 p-4 h-full overflow-auto border rounded-md bg-gray-50"></div>
+
+            <form id="chatForm" 
+                  hx-post="/api/chat" 
+                  hx-target="#response-container" 
+                  hx-swap="beforeend"
+                  class="flex">
+                <input id="message" name="message" type="text" placeholder="Type your message" class="border p-2 flex-1 mr-2 rounded">
+                <button type="submit" class="bg-blue-500 text-white p-2 rounded">Send</button>
+            </form>
+        </main>
+    </div>
+</body>
+</html>

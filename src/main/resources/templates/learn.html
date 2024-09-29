@@ -1,0 +1,17 @@
+<div class="mt-10 flex flex-col items-center">
+    <h2 class="text-2xl font-bold mb-4">Learn Section</h2>
+    <form id="learnForm" hx-get="/api/learn" hx-target="#learn-response" hx-swap="innerHTML" hx-params="topic,level" class="w-3/4">
+        <input id="question" name="topic" type="text" placeholder="Ask your question" class="border p-3 mb-4 sm:w-3/4">
+        <div>
+            <select id="level" name="level" class="border p-2 mb-4 w-full sm:w-3/4">
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+            </select>
+        </div>
+        <button type="submit" class="bg-blue-500 text-white p-2">Submit</button>
+    </form>
+    <div id="learn-response" class="mt-4 w-1/4 p-4 border border-gray-300 rounded-lg shadow-md bg-gray-50">
+        <!-- Response will be injected here -->
+    </div>
+</div>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT Clone</title>
+    <script src="https://unpkg.com/htmx.org@1.9.12" integrity="sha384-ujb1lZYygJmzgSwoxRggbCHcjc0rB2XoQrxeTUQyRjrOnlCoYta87iKBWq3EsdM2" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <!-- Fixed Navigation Bar -->
+    <nav class="bg-gray-800 fixed top-0 left-0 right-0 p-4 z-10">
+        <div class="flex justify-between">
+            <h1 class="text-white text-lg font-bold">ChatGPT Clone</h1>
+            <div class="space-x-4">
+                <button hx-get="/home" hx-target="#main-content" class="text-white">Home</button>
+                <button hx-get="/chat" hx-target="#main-content" class="text-white">Chat</button>
+                <button hx-get="/learn" hx-target="#main-content" class="text-white">Learn</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="flex h-screen pt-16">
+        <!-- Main Content -->
+        <main class="flex-1 bg-white p-4" id="main-content">
+            <!-- Dynamic content will be loaded here -->
+            <div class="text-center mt-10">
+                <h2 class="text-2xl">Welcome to ChatGPT Clone</h2>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

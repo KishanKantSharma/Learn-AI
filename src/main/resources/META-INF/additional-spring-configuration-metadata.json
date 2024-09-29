@@ -1,0 +1,12 @@
+{"properties": [
+  {
+    "name": "spring.weather.api.base.uri",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.weather.api.base.uri'"
+  },
+  {
+    "name": "spring.weather.api.key",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.weather.api.key'"
+  }
+]}
